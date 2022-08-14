@@ -17,8 +17,8 @@ const Location = () => {
                 </div>
 
                 <div className='d-flex'>
-                    <p><FontAwesomeIcon icon={faPhone}></FontAwesomeIcon> +15652569988</p>
-                    <p className='ms-2'><FontAwesomeIcon icon={faEnvelope} />  mdsabbirkhan@gmail.com</p>
+                    <p><FontAwesomeIcon icon={faPhone}></FontAwesomeIcon> +8801625645510</p>
+                    <p className='ms-2'><FontAwesomeIcon icon={faEnvelope} />  mdsabbirkhan1971@gmail.com</p>
                 </div>
             </div>
         </div>
