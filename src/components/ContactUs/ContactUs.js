@@ -28,7 +28,7 @@ const ContactUs = () => {
                     <textarea name="message" className='w-75 p-2' placeholder='Write Your Message'></textarea>
                     <br />
 
-                    <input className='text-white rounded-pill px-5 py-2 w-50 ms-5 bg-success' type="submit" name="" id="" />
+                    <input className='text-white rounded-pill p-2 fs-4  w-75 bg-success' type="submit" name="" id="" />
                 </div>
             </div>
         </div>
