@@ -16,7 +16,7 @@ import SignIn from './components/Shared/SignIn/SignIn';
 function App() {
 
   return (
-    <div>
+    <div className='background'>
       <Location></Location>
       <Header></Header>
       <Routes>

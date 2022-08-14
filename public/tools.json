@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Hacksaw",
+        "price": 99,
+        "description": "A hacksaw is a fine-toothed saw, originally and mainly made for cutting metal. The equivalent saw for cutting wood is usually called a bow saw. Most hacksaws are hand saws with a C-shaped walking frame that holds a blade under tension",
+        "image": "https://i.ibb.co/CK1r8vZ/stack-working-tools-275559-13109.webp",
+        "available quantity": 100000,
+        "minimum order quantity": 100
+    },
+    {
+        "name": "Soldering Iron",
+        "price": 159,
+        "description": "A soldering iron is a hand tool used in soldering. It supplies heat to melt solder so that it can flow into the joint between two workpieces. A soldering iron is composed of a heated metal tip and an insulated handle",
+        "image": "https://i.ibb.co/nzS4PBs/soldaring-Iron.jpg",
+        "available quantity": 200000,
+        "minimum order quantity": 500
+    },
+    {
+        "name": "Paint Brush",
+        "price": 179,
+        "description": "A paintbrush is a brush used to apply paint or ink. A paintbrush is usually made by clamping bristles to a handle with a ferrule. They are available in various sizes, shapes, and materials. Thicker ones are used for filling in, and thinner ones are used for details.",
+        "image": "https://i.ibb.co/kH3N40g/paintbrush.webp",
+        "available quantity": 5000,
+        "minimum order quantity": 300
+    },
+    {
+        "name": "Hammer",
+        "price": 89,
+        "description": "A hammer is a tool, most often a hand tool, consisting of a weighted head fixed to a long handle that is swung to deliver an impact to a small area of an object. This can be, for example, to drive nails into wood, to shape metal, or to crush rock",
+        "image": "https://i.ibb.co/n68gzKd/hammer.webp",
+        "available quantity": 7000,
+        "minimum order quantity": 200
+    },
+    {
+        "name": "Glu Gan",
+        "price": 75,
+        "description": "Glu Gan is also known hot gan that is commonly sold as solid cylindrical sticks of various diameters designed to be applied using a hot glue gun. The gun uses a continuous-duty heating element to melt the plastic glue, which the user pushes through the gun either with a mechanical trigger mechanism on the gun, or with direct finger pressure. The glue squeezed out of the heated nozzle is initially hot enough to burn and even blister skin.",
+        "image": "https://i.ibb.co/vZymnYd/glugan.webp",
+        "available quantity": 7500,
+        "minimum order quantity": 350
+    },
+    {
+        "name": "Electric Saw",
+        "price": 199,
+        "description": "A circular saw is a power-saw using a toothed or abrasive disc or blade to cut different materials using a rotary motion spinning around an arbor. A hole saw and ring saw also use a rotary motion but are different from a circular saw. Circular saws may also be loosely used for the blade itself",
+        "image": "https://i.ibb.co/Sm1F3kT/electric-Saw.webp",
+        "available quantity": 5000,
+        "minimum order quantity": 100
+    }
+]
