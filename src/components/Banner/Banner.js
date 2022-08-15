@@ -24,7 +24,7 @@ const Banner = () => {
                     <Carousel.Caption className='py-5'>
                         <h3>Wire Manufacturing</h3>
                         <p>We have developed the process optimization technology that can be applied to the production preparation processes for factories outside of Japan. In order to shorten the lead time of the production preparation for oversea factories, manufacturing companies focus on two points: First, measuring process data such as the temperature of a part after being heated for a hot forging process is focused</p>
-                        <Button variant="success">Enquire Now</Button>{' '}
+                        <Button variant="info">Enquire Now</Button>{' '}
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -37,7 +37,7 @@ const Banner = () => {
                     <Carousel.Caption className='py-5'>
                         <h3>Adjusted Video Cable && Wire Manufacturing </h3>
                         <p>We have developed the process optimization technology that can be applied to the production preparation processes for factories outside of Japan. In order to shorten the lead time of the production preparation for oversea factories, manufacturing companies focus on two points: First, measuring process data such as the temperature of a part after being heated for a hot forging process is focused</p>
-                        <Button variant="success">Enquire Now</Button>{' '}
+                        <Button variant="info">Enquire Now</Button>{' '}
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -52,7 +52,7 @@ const Banner = () => {
                         <p>
                             We have developed the process optimization technology that can be applied to the production preparation processes for factories outside of Japan. In order to shorten the lead time of the production preparation for oversea factories, manufacturing companies focus on two points: First, measuring process data such as the temperature of a part after being heated for a hot forging process is focused
                         </p>
-                        <Button variant="success">Enquire Now</Button>{' '}
+                        <Button variant="info">Enquire Now</Button>{' '}
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
