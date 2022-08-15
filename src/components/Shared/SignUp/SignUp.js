@@ -1,10 +1,43 @@
 import React from 'react';
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useForm } from "react-hook-form";
 import { Link } from 'react-router-dom';
-const SignUp = () => {
-    const { register, formState: { errors }, handleSubmit } = useForm();
+import auth from '../../../firebase.init';
+import SocialLogin from '../SocialLogin/SocialLogin';
+import { toast } from 'react-toastify';
 
-    const onSubmit = (data) => console.log(data);
+
+
+const SignUp = () => {
+
+    const { register, formState: { errors }, handleSubmit } = useForm();
+    const [
+        createUserWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useCreateUserWithEmailAndPassword(auth);
+    if (error) {
+        return (
+            <div>
+                <p>Error: {error.message}</p>
+            </div>
+        );
+    }
+    if (loading) {
+        return <p>Loading...</p>;
+    }
+    if (user) {
+        return (
+            toast.success('User Created  Successful')
+        );
+    }
+
+    const onSubmit = (data) => {
+        console.log(data)
+        const { email, password } = data;
+        createUserWithEmailAndPassword(email, password)
+    };
     return (
         <div className='container w-50 p-5'>
 
@@ -29,6 +62,8 @@ const SignUp = () => {
                 <p>Already have an Account? <Link to='/signin'>Please Sign In here</Link></p>
                 <input className='bg-info px-3 py-2 rounded-2' type="submit" value='Sign Up' />
             </form>
+
+            <SocialLogin></SocialLogin>
         </div>
     );
 };

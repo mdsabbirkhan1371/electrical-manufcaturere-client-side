@@ -5,7 +5,16 @@ import Navbar from 'react-bootstrap/Navbar';
 import logo from '../../../images/logo/company.jpg'
 import { Link } from "react-router-dom";
 import './Header.css'
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../../firebase.init';
+import Button from 'react-bootstrap/Button';
+import { signOut } from 'firebase/auth';
 const Header = () => {
+
+    const [user] = useAuthState(auth)
+    const logout = () => {
+        signOut(auth);
+    };
 
     return (
         <div className=''>
@@ -27,10 +36,16 @@ const Header = () => {
 
                         </Nav>
                         <Nav>
-                            <Nav.Link as={Link} to='signup'>Sign Up</Nav.Link>
-                            <Nav.Link as={Link} to='signin'>
-                                Sign In
-                            </Nav.Link>
+                            {
+                                user ?
+                                    <Button onClick={logout} variant="primary">Sign Out</Button>
+                                    :
+                                    <>
+                                        <Nav.Link as={Link} to='signup'>Sign Up</Nav.Link>
+                                        <Nav.Link as={Link} to='signin'>Sign In</Nav.Link>
+                                    </>
+                            }
+
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

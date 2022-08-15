@@ -31,10 +31,10 @@ const Footer = () => {
                         <h4>Social Media</h4>
 
                         <div className='d-flex justify-content-center fs-3 text-white'>
-                            <a href="https://twitter.com/"><p className='ms-2'><FontAwesomeIcon icon={faTwitter}></FontAwesomeIcon></p></a>
-                            <a href="https://www.facebook.com/"><p className='ms-2'><FontAwesomeIcon icon={faFacebook}></FontAwesomeIcon></p></a>
-                            <a href="https://www.linkedin.com/"><p className='ms-2'><FontAwesomeIcon icon={faLinkedin}></FontAwesomeIcon></p></a>
-                            <a href="https://www.instagram.com/"><p className='ms-2'><FontAwesomeIcon icon={faInstagram}></FontAwesomeIcon></p></a>
+                            <a target='blank' href="https://twitter.com/"><p className='ms-2'><FontAwesomeIcon icon={faTwitter}></FontAwesomeIcon></p></a>
+                            <a target='blank' href="https://www.facebook.com/"><p className='ms-2'><FontAwesomeIcon icon={faFacebook}></FontAwesomeIcon></p></a>
+                            <a target='blank' href="https://www.linkedin.com/"><p className='ms-2'><FontAwesomeIcon icon={faLinkedin}></FontAwesomeIcon></p></a>
+                            <a target='blank' href="https://www.instagram.com/"><p className='ms-2'><FontAwesomeIcon icon={faInstagram}></FontAwesomeIcon></p></a>
                         </div>
                     </div>
                     <div className="col-md-3">
