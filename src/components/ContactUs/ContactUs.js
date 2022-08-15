@@ -6,7 +6,7 @@ const ContactUs = () => {
     return (
 
         <div className='container '>
-            <p className='text-center fs-3 my-5'>Contact Us</p>
+            <p className='text-center fs-3 my-5 text-info'>Contact Us</p>
             <div class="row ps-5">
                 <div class="col-md-7">
                     <p className='fs-5'><FontAwesomeIcon icon={faLocationDot}></FontAwesomeIcon> Our Office Address</p>

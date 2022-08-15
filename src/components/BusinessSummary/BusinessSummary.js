@@ -40,7 +40,7 @@ const BusinessSummary = () => {
             <div className='row bg-dark rounded  p-4'>
                 <div className="col-md-8 ">
                     <h3 className='text-info fs-2'>Have Any question about us to get a product request? </h3>
-                    <p>Don't hesitate To Contact us</p>
+                    <p className='fs-4'>Don't hesitate To Contact us</p>
                 </div>
                 <div className="col-md-4 text-center p-5">
                     <button className='btn btn-info mb-2'>Request For Quote</button>

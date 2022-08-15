@@ -5,6 +5,7 @@ import React from 'react';
 import Button from 'react-bootstrap/Button';
 import { useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { toast } from 'react-toastify';
+import Loading from '../Loading/Loading';
 
 
 const SocialLogin = () => {
@@ -21,7 +22,7 @@ const SocialLogin = () => {
         );
     }
     if (loading || gitLoading) {
-        return <p>Loading...</p>;
+        return <Loading></Loading>
     }
     if (user || gitUser) {
 

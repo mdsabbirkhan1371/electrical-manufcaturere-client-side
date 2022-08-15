@@ -5,18 +5,21 @@ import { Link } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import { toast } from 'react-toastify';
-
-
+import Loading from '../Loading/Loading';
 
 const SignUp = () => {
 
     const { register, formState: { errors }, handleSubmit } = useForm();
+
     const [
         createUserWithEmailAndPassword,
         user,
         loading,
         error,
-    ] = useCreateUserWithEmailAndPassword(auth);
+    ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+
+
+
     if (error) {
         return (
             <div>
@@ -25,11 +28,11 @@ const SignUp = () => {
         );
     }
     if (loading) {
-        return <p>Loading...</p>;
+        return <Loading></Loading>
     }
     if (user) {
         return (
-            toast.success('User Created  Successful')
+            toast.success('User Created  Successful adn Please Verify Your Email')
         );
     }
 
@@ -37,6 +40,7 @@ const SignUp = () => {
         console.log(data)
         const { email, password } = data;
         createUserWithEmailAndPassword(email, password)
+
     };
     return (
         <div className='container w-50 p-5'>

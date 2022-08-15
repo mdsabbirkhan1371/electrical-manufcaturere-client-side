@@ -6,6 +6,7 @@ import auth from '../../../firebase.init';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import './SignIn.css'
 import { toast } from 'react-toastify';
+import Loading from '../Loading/Loading';
 
 const SignIn = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
@@ -25,7 +26,7 @@ const SignIn = () => {
         );
     }
     if (loading) {
-        return <p>Loading...</p>;
+        return <Loading></Loading>
     }
     if (user) {
 
