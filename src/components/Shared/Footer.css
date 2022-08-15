@@ -1,3 +1,13 @@
 .footer {
     background-color: #000000;
 }
+
+footer a {
+    text-decoration: none;
+    padding: 20px;
+    color: aliceblue
+}
+
+footer h4 {
+    color: aqua;
+}

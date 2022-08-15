@@ -3,6 +3,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import img1 from '../../images/for carosel/img1.jpg'
 import img2 from '../../images/for carosel/img2.jpg'
 import img3 from '../../images/for carosel/img3.jpg'
+import img4 from '../../images/tools&parts/CompanyProfile_UniversalHero_171220.jpg'
 import Button from 'react-bootstrap/Button';
 import './Banner.css'
 const Banner = () => {
@@ -17,7 +18,7 @@ const Banner = () => {
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src={img1}
+                        src={img4}
                         alt="First slide"
                     />
                     <Carousel.Caption className='py-5'>
@@ -29,7 +30,7 @@ const Banner = () => {
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src={img2}
+                        src={img1}
                         alt="Second slide"
                     />
 

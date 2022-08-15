@@ -10,10 +10,10 @@ const Location = () => {
             <div className='d-flex justify-content-between'>
                 <div className='d-flex align-items-center'>
                     <p className='ms-3 '><FontAwesomeIcon icon={faLocationDot}></FontAwesomeIcon> Malad West</p>
-                    <p className='ms-3'><FontAwesomeIcon icon={faTwitter}></FontAwesomeIcon></p>
-                    <p className='ms-3'><FontAwesomeIcon icon={faFacebook}></FontAwesomeIcon></p>
-                    <p className='ms-3'><FontAwesomeIcon icon={faLinkedin}></FontAwesomeIcon></p>
-                    <p className='ms-3'><FontAwesomeIcon icon={faInstagram}></FontAwesomeIcon></p>
+                    <p className='ms-3 text-primary'><FontAwesomeIcon icon={faTwitter}></FontAwesomeIcon></p>
+                    <p className='ms-3 text-primary'><FontAwesomeIcon icon={faFacebook}></FontAwesomeIcon></p>
+                    <p className='ms-3 text-primary'><FontAwesomeIcon icon={faLinkedin}></FontAwesomeIcon></p>
+                    <p className='ms-3 text-primary'><FontAwesomeIcon icon={faInstagram}></FontAwesomeIcon></p>
                 </div>
 
                 <div className='d-flex'>
