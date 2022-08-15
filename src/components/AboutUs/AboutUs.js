@@ -4,7 +4,7 @@ const AboutUs = () => {
     return (
         <div className='row align-items-center'>
             <div className="col-md-6 py-5">
-                <img src={aboutImg} alt="" />
+                <img className='img-fluid' src={aboutImg} alt="" />
             </div>
             <div className="col-md-6 px-5">
                 <p className='fs-3'>About Us</p>

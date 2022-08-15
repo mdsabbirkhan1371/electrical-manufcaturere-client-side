@@ -20,7 +20,7 @@ const Header = () => {
                             <Nav.Link as={Link} to='/home'>Home</Nav.Link>
                             <Nav.Link as={Link} to='/tools'>Tools/Parts</Nav.Link>
                             <Nav.Link as={Link} to='/reviews'>Reviews</Nav.Link>
-                            <Nav.Link as={Link} to='/business'>Business_Summary</Nav.Link>
+                            {/* <Nav.Link as={Link} to='/business'>Business_Summary</Nav.Link> */}
                             <Nav.Link as={Link} to='/blogs'>Blogs</Nav.Link>
                             <Nav.Link as={Link} to='/about'>About Us</Nav.Link>
                             <Nav.Link as={Link} to='/contact'>Contact Us</Nav.Link>

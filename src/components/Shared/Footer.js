@@ -8,7 +8,7 @@ const Footer = () => {
     const today = new Date();
     const year = today.getFullYear();
     return (
-        <div>
+        <div className=' py-5'>
             <footer className='text-center bg-dark p-5'>
                 <div className="row">
                     <div className="col-md-3">
