@@ -56,6 +56,8 @@ const Banner = () => {
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
+
+
         </div>
     );
 };

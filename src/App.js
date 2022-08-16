@@ -17,6 +17,8 @@ import Blogs from './components/Blogs/Blogs';
 import SignUp from './components/Shared/SignUp/SignUp';
 import SignIn from './components/Shared/SignIn/SignIn';
 import ToolsParts from './components/Tools&Parts/ToolsParts';
+import Purchase from './components/Shared/Purchase/Purchase';
+import RequireAuth from './components/Shared/RequireAuth/RequireAuth';
 
 function App() {
 
@@ -31,6 +33,13 @@ function App() {
         <Route path='/reviews' element={<Reviews></Reviews>}></Route>
         <Route path='/contact' element={<ContactUs></ContactUs>}></Route>
         <Route path='/tools' element={<ToolsParts></ToolsParts>}></Route>
+
+        <Route path='/tools/:id' element={
+          <RequireAuth>
+            <Purchase></Purchase>
+          </RequireAuth>}>
+        </Route>
+
         <Route path='/business' element={<BusinessSummary></BusinessSummary>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
