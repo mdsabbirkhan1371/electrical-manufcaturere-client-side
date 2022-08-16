@@ -9,7 +9,7 @@ import Loading from '../Loading/Loading';
 
 const SignUp = () => {
 
-    const { register, formState: { errors }, handleSubmit } = useForm();
+    const { register, formState: { errors }, handleSubmit, reset } = useForm();
 
     const [
         createUserWithEmailAndPassword,
@@ -40,6 +40,7 @@ const SignUp = () => {
         console.log(data)
         const { email, password } = data;
         createUserWithEmailAndPassword(email, password)
+        reset()
 
     };
     return (

@@ -7,9 +7,16 @@ import SocialLogin from '../SocialLogin/SocialLogin';
 import './SignIn.css'
 import { toast } from 'react-toastify';
 import Loading from '../Loading/Loading';
+import { useNavigate, useLocation } from "react-router-dom";
+
 
 const SignIn = () => {
+
+    const location = useLocation();
+    const navigate = useNavigate();
     const { register, formState: { errors }, handleSubmit } = useForm();
+
+    let from = location.state?.from?.pathname || "/";
 
     const [
         signInWithEmailAndPassword,
@@ -21,7 +28,7 @@ const SignIn = () => {
     if (error) {
         return (
             <div>
-                <p>Error: {error.message}</p>
+                <p className='text-danger'>Error: {error.message}</p>
             </div>
         );
     }
@@ -29,10 +36,8 @@ const SignIn = () => {
         return <Loading></Loading>
     }
     if (user) {
-
-        return (
-            toast.success("User Sign In Successful")
-        );
+        navigate(from, { replace: true });
+        toast.success('User Sign In Successful')
     }
 
     const onSubmit = (data) => {
