@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useForm } from "react-hook-form";
 import { Link } from 'react-router-dom';
@@ -8,6 +8,7 @@ import './SignIn.css'
 import { toast } from 'react-toastify';
 import Loading from '../Loading/Loading';
 import { useNavigate, useLocation } from "react-router-dom";
+import useToken from '../../../hooks/useToken';
 
 
 const SignIn = () => {
@@ -24,6 +25,14 @@ const SignIn = () => {
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
+    const [token] = useToken(user)
+
+    useEffect(() => {
+        if (user) {
+            navigate(from, { replace: true });
+            toast.success('User Sign In Successful')
+        }
+    }, [token, from, navigate]);
 
     if (error) {
         return (
@@ -35,13 +44,11 @@ const SignIn = () => {
     if (loading) {
         return <Loading></Loading>
     }
-    if (user) {
-        navigate(from, { replace: true });
-        toast.success('User Sign In Successful')
-    }
+
+
 
     const onSubmit = (data) => {
-        console.log(data)
+        // console.log(data)
         const { email, password } = data;
         signInWithEmailAndPassword(email, password)
     };

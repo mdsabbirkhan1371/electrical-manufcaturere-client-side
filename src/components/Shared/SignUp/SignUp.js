@@ -6,6 +6,8 @@ import auth from '../../../firebase.init';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import { toast } from 'react-toastify';
 import Loading from '../Loading/Loading';
+import useToken from '../../../hooks/useToken';
+import { useNavigate } from "react-router-dom";
 
 const SignUp = () => {
 
@@ -18,7 +20,8 @@ const SignUp = () => {
         error,
     ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
-
+    const token = useToken(user)
+    const navigate = useNavigate()
 
     if (error) {
         return (
@@ -31,13 +34,13 @@ const SignUp = () => {
         return <Loading></Loading>
     }
     if (user) {
-        return (
-            toast.success('User Created  Successful adn Please Verify Your Email')
-        );
+        navigate('/home')
+        toast.success('User Created  Successful adn Please Verify Your Email')
     }
 
+
     const onSubmit = (data) => {
-        console.log(data)
+
         const { email, password } = data;
         createUserWithEmailAndPassword(email, password)
         reset()

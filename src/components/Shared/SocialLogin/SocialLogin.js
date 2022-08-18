@@ -6,6 +6,8 @@ import Button from 'react-bootstrap/Button';
 import { useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { toast } from 'react-toastify';
 import Loading from '../Loading/Loading';
+import useToken from '../../../hooks/useToken';
+import { useNavigate } from "react-router-dom";
 
 
 const SocialLogin = () => {
@@ -13,6 +15,8 @@ const SocialLogin = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
 
     const [signInWithGithub, gitUser, gitLoading, gitError] = useSignInWithGithub(auth);
+    const token = useToken(user || gitUser)
+    const navigate = useNavigate()
 
     if (error || gitError) {
         return (
@@ -25,10 +29,8 @@ const SocialLogin = () => {
         return <Loading></Loading>
     }
     if (user || gitUser) {
-
-        return (
-            toast.success('User Login Successful')
-        );
+        navigate('/home')
+        toast.success('User Login Successful')
     }
 
     return (

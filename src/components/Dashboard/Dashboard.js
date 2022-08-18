@@ -4,10 +4,10 @@ const Dashboard = () => {
 
     return (
         <div>
-            <h3 className='text-center text-info'>Welcome To Your Dashboard</h3>
+            <h3 className='text-green-500'>Welcome To Your Dashboard</h3>
             <div>
 
-                <h4>hello</h4>
+                <h4 className='text-red-500'>hello</h4>
             </div>
 
         </div>

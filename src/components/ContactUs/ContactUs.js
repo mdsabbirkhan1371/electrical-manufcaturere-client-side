@@ -7,8 +7,8 @@ const ContactUs = () => {
 
         <div className='container '>
             <p className='text-center fs-3 my-5 text-info'>Contact Us</p>
-            <div class="row ps-5">
-                <div class="col-md-7">
+            <div className="row ps-5">
+                <div className="col-md-7">
                     <p className='fs-5'><FontAwesomeIcon icon={faLocationDot}></FontAwesomeIcon> Our Office Address</p>
                     <p>Dhaka,Kallanpur-1210,road#5 house#22</p>
 
@@ -21,7 +21,7 @@ const ContactUs = () => {
                     <p className='fs-5'><FontAwesomeIcon icon={faClock}></FontAwesomeIcon> Our Timing</p>
                     <p>Mon-Sun : 10:00 AM -07:00 PM</p>
                 </div>
-                <div class="col-md-5">
+                <div className="col-md-5">
                     <input className=' w-75 my-2 p-2' type="text" name="" id="" placeholder='Your Name' /><br />
                     <input className=' w-75 mb-2 p-2' type="text" name="" id="" placeholder='Your Email' /><br />
                     <input className=' w-75 mb-2 p-2' type="text" name="" id="" placeholder='Your Number' /><br />
