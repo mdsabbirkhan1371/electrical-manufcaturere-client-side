@@ -18,15 +18,17 @@ const PurchaseModal = ({ show, handleClose, purchase }) => {
 
     const onSubmit = (data) => {
         console.log(data)
-        const { price, email, name, minimumOrder, product } = data;
+        const { price, email, name, minimumOrder, product, address, phone } = data;
 
         const booking = {
             productId: purchase._id,
-            product,
-            name,
+            productName: product,
+            orderQuantity: minimumOrder,
             price,
+            userName: name,
+            userAddress: address,
             email,
-            minimumOrder
+            phone
         }
 
         fetch('http://localhost:5000/purchase', {
@@ -69,6 +71,12 @@ const PurchaseModal = ({ show, handleClose, purchase }) => {
 
                     <label htmlFor="name">Name</label>
                     <input {...register("name", { required: true })} type="text" name='name' value={user?.displayName} placeholder='Your name' className="w-75 form-control" /> <br />
+
+                    <label htmlFor="address">Address</label>
+                    <input {...register("address", { required: true })} type="text" name='address' placeholder='Your Address' className="w-75 form-control" /> <br />
+
+                    <label htmlFor="phone">Phone Number</label>
+                    <input {...register("phone", { required: true })} type="text" name='phone' placeholder='Your Phone Number' className="w-75 form-control" /> <br />
 
 
                     <input onClick={handleClose} className="btn btn-danger" type="submit" value='Cancel' />

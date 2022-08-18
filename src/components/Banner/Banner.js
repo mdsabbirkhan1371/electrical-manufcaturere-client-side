@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import img1 from '../../images/for carosel/img1.jpg'
-import img2 from '../../images/for carosel/img2.jpg'
 import img3 from '../../images/for carosel/img3.jpg'
 import img4 from '../../images/tools&parts/CompanyProfile_UniversalHero_171220.jpg'
 import Button from 'react-bootstrap/Button';

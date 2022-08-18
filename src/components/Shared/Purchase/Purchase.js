@@ -16,7 +16,7 @@ const Purchase = () => {
         fetch(`http://localhost:5000/purchase/${id}`)
             .then(res => res.json())
             .then(data => setPurchase(data))
-    }, [])
+    }, [id])
 
 
     return (

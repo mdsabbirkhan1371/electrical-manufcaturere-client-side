@@ -39,11 +39,15 @@ const Header = () => {
                         <Nav>
                             {
                                 user ?
-                                    <Button onClick={logout} variant="primary">Sign Out</Button>
+                                    <>
+                                        <Nav.Link as={Link} to='dashboard'>Dashboard</Nav.Link>
+                                        <Button className='ms-3' onClick={logout} variant="primary">Sign Out</Button>
+
+                                    </>
                                     :
                                     <>
-                                        <Nav.Link as={Link} to='signup'>Sign Up</Nav.Link>
-                                        <Nav.Link as={Link} to='signin'>Sign In</Nav.Link>
+                                        <Nav.Link as={Link} to='/signup'>Sign Up</Nav.Link>
+                                        <Nav.Link as={Link} to='/signin'>Sign In</Nav.Link>
                                     </>
                             }
 
