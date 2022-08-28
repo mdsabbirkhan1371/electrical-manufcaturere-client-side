@@ -32,7 +32,7 @@ const SignIn = () => {
             navigate(from, { replace: true });
             toast.success('User Sign In Successful')
         }
-    }, [token, from, navigate]);
+    }, [token, from, navigate, user]);
 
     if (error) {
         return (
@@ -62,12 +62,12 @@ const SignIn = () => {
 
                 <label className='fs-4' htmlFor="email">Email</label>
                 <br />
-                <input className='w-75 p-2 rounded-2' placeholder='Enter Your Email' {...register("email", { required: "Email Address is Required" })} />
+                <input className='w-75 p-2 rounded-2 text-dark' placeholder='Enter Your Email' {...register("email", { required: "Email Address is Required" })} />
                 <p className='text-danger'>{errors.email?.message}</p>
 
                 <label className='fs-4' htmlFor="password">Password</label>
                 <br />
-                <input className='w-75 p-2 rounded-2' placeholder='Enter Your Password' {...register("password", { required: "Password is Required" })} />
+                <input className='w-75 p-2 rounded-2 text-dark' placeholder='Enter Your Password' {...register("password", { required: "Password is Required" })} />
                 <p className='text-danger'>{errors.password?.message}</p>
 
                 <p>Don't have an Account? <Link to='/signup'>Create New Account</Link></p>

@@ -19,13 +19,20 @@ const Header = () => {
     };
 
     return (
+        // 
         <div className=''>
             <Navbar collapseOnSelect expand="lg" bg="light" variant="light" >
                 <Container>
+                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+
                     <Navbar.Brand as={Link} to='/home'>
                         <img style={{ width: '100px' }} src={logo} alt="" />
                     </Navbar.Brand>
-                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+
+                    <label
+                        for="my-drawer-2" class="btn drawer-button d-lg-none"><span class="navbar-toggler-icon"></span>
+                    </label>
+
                     <Navbar.Collapse className='fs-5 fw-semibold' id="responsive-navbar-nav">
                         <Nav className="me-auto">
                             <Nav.Link as={Link} to='/home'>Home</Nav.Link>
@@ -54,7 +61,9 @@ const Header = () => {
 
                         </Nav>
                     </Navbar.Collapse>
+
                 </Container>
+
             </Navbar>
 
         </div>

@@ -31,7 +31,7 @@ const Purchase = () => {
                     <p><small>Stocks  : {purchase?.availableQuantity}</small></p>
                     <p><small>Minimum Order  : {purchase?.minimumOrder}</small></p>
                     <p className="card-text">{purchase?.description.slice(0, 80)}</p>
-                    <Button onClick={handleShow} variant="info">Confirmed Purchase</Button>
+                    <Button className='pb-5' onClick={handleShow} variant="info">Confirmed Purchase</Button>
                     <PurchaseModal purchase={purchase} show={show} handleClose={handleClose} />
                 </div>
             </div>
