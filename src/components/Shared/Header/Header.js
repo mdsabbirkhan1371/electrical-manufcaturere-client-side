@@ -9,13 +9,16 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import Button from 'react-bootstrap/Button';
 import { signOut } from 'firebase/auth';
+
 const Header = () => {
 
     const [user] = useAuthState(auth)
 
+
     const logout = () => {
-        signOut(auth);
         localStorage.removeItem('accessToken')
+        signOut(auth);
+
     };
 
     return (
@@ -30,7 +33,7 @@ const Header = () => {
                     </Navbar.Brand>
 
                     <label
-                        for="my-drawer-2" class="btn drawer-button d-lg-none"><span class="navbar-toggler-icon"></span>
+                        htmlFor="my-drawer-2" className="btn drawer-button d-lg-none"><span className="navbar-toggler-icon"></span>
                     </label>
 
                     <Navbar.Collapse className='fs-5 fw-semibold' id="responsive-navbar-nav">

@@ -15,7 +15,7 @@ const SocialLogin = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
 
     const [signInWithGithub, gitUser, gitLoading, gitError] = useSignInWithGithub(auth);
-    const token = useToken(user || gitUser)
+    const [token] = useToken(user || gitUser)
     const navigate = useNavigate()
 
     if (error || gitError) {

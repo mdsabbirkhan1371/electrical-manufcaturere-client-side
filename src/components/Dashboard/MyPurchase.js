@@ -3,23 +3,29 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 
 const MyPurchase = () => {
-    const [purchses, setPurchases] = useState([])
+    const [purchases, setPurchases] = useState([])
     const [user] = useAuthState(auth)
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:5000/purchase?email=${user.email}`)
-                .then(res => res.json())
-                .then(data => {
-                    setPurchases(data)
-                })
+            fetch(`http://localhost:5000/purchase?email=${user.email}`, {
+                method: "GET",
+                headers: {
+                    "authorization": `Bearer ${localStorage.getItem('accessToken')}`
+                }
+            })
+                .then(res => res.json()
+
+                )
+                .then(data => setPurchases(data))
         }
     }, [user])
 
     return (
         <div>
-            <h3 className='text-center mb-5'>My Purchase Items :{purchses.length}</h3>
-            <div class="overflow-x-auto">
-                <table class="table w-full">
+            <h3 className='text-center mb-5'>My Purchase Items :{purchases?.length}</h3>
+
+            <div className="overflow-x-auto">
+                <table className="table w-full">
 
                     <thead>
                         <tr>
@@ -32,8 +38,10 @@ const MyPurchase = () => {
                     </thead>
                     <tbody>
                         {
-                            purchses.map((p, index) =>
-                                <tr>
+                            purchases?.map((p, index) =>
+                                <tr
+                                    key={p._id}
+                                >
                                     <th>{index + 1}</th>
                                     <td>{p.productName}</td>
                                     <td>${p.price}</td>

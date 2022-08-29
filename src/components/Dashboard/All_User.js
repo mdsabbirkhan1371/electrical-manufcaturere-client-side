@@ -1,16 +1,27 @@
 import React, { useEffect, useState } from 'react';
+import Loading from '../Shared/Loading/Loading';
+import UserRow from './UserRow';
 
 const All_User = () => {
 
     const [users, setUsers] = useState([])
+    const [loading] = useState()
+
+
     useEffect(() => {
         fetch('http://localhost:5000/alluser')
             .then(res => res.json())
             .then(data => {
+
                 setUsers(data)
-                console.log(data)
+
             })
     }, [])
+
+    if (loading) {
+        return <Loading></Loading>
+    }
+
     return (
         <div className='text-center'>
             <h3 className='text-center'>All User: {users.length}</h3>
@@ -20,18 +31,19 @@ const All_User = () => {
                         <tr>
                             <th></th>
                             <th>Name</th>
-                            <th>Job</th>
-                            <th>Favorite Color</th>
+                            <th>Make Admin</th>
+                            <th>Remove User</th>
                         </tr>
                     </thead>
                     <tbody>
 
-                        <tr>
-                            <th>1</th>
-                            <td>Cy Ganderton</td>
-                            <td>Quality Control Specialist</td>
-                            <td>Blue</td>
-                        </tr>
+                        {
+                            users.map((user, index) => <UserRow
+                                user={user}
+                                index={index}
+                                setUsers={setUsers}
+                            ></UserRow>)
+                        }
 
                     </tbody>
                 </table>

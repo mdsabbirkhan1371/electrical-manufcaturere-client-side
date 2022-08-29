@@ -20,7 +20,7 @@ const SignUp = () => {
         error,
     ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
-    const token = useToken(user)
+    const [token] = useToken(user)
     const navigate = useNavigate()
 
     if (error) {
@@ -35,6 +35,7 @@ const SignUp = () => {
     }
     if (user) {
         navigate('/home')
+        console.log(user)
         toast.success('User Created  Successful adn Please Verify Your Email')
     }
 
