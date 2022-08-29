@@ -11,9 +11,15 @@ const UserRow = ({ user, index, setUsers }) => {
             }
         })
             .then(res => res.json())
-            .then(data => {
 
-                toast.success('Made An Admin Successfully')
+            .then(data => {
+                if (data.modifiedCount > 0) {
+                    toast.success('Made An Admin Successfully')
+                }
+                else {
+                    toast.error('Failed To Make An Admin')
+                }
+
             })
     }
     return (
