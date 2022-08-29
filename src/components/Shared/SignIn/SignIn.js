@@ -54,7 +54,7 @@ const SignIn = () => {
     };
     return (
 
-        <div className='container w-50 p-5'>
+        <div className='container p-5 w-50'>
 
             <h2 className='text-info'>Please_Sign In Here!</h2>
 
@@ -62,16 +62,16 @@ const SignIn = () => {
 
                 <label className='fs-4' htmlFor="email">Email</label>
                 <br />
-                <input className='w-75 p-2 rounded-2 text-dark' placeholder='Enter Your Email' {...register("email", { required: "Email Address is Required" })} />
+                <input className='p-2 w-75 rounded-2 text-dark' placeholder='Enter Your Email' {...register("email", { required: "Email Address is Required" })} />
                 <p className='text-danger'>{errors.email?.message}</p>
 
                 <label className='fs-4' htmlFor="password">Password</label>
                 <br />
-                <input className='w-75 p-2 rounded-2 text-dark' placeholder='Enter Your Password' {...register("password", { required: "Password is Required" })} />
+                <input className='p-2 w-75 rounded-2 text-dark' placeholder='Enter Your Password' {...register("password", { required: "Password is Required" })} />
                 <p className='text-danger'>{errors.password?.message}</p>
 
                 <p>Don't have an Account? <Link to='/signup'>Create New Account</Link></p>
-                <input className='bg-info px-3 py-2 rounded-2' type="submit" value='Sign In' />
+                <input className='px-3 py-2 bg-info rounded-2' type="submit" value='Sign In' />
             </form>
             <SocialLogin></SocialLogin>
         </div>
