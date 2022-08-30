@@ -9,7 +9,7 @@ const All_User = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/alluser')
+        fetch('https://electrical-manufactere.herokuapp.com/alluser')
             .then(res => res.json())
             .then(data => {
 

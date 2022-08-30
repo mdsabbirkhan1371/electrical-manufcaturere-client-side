@@ -13,7 +13,7 @@ const Purchase = () => {
     const handleShow = () => setShow(true);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/purchase/${id}`)
+        fetch(`https://electrical-manufactere.herokuapp.com/purchase/${id}`)
             .then(res => res.json())
             .then(data => setPurchase(data))
     }, [id])

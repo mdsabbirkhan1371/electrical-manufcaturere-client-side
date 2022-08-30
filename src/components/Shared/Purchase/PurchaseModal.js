@@ -31,7 +31,7 @@ const PurchaseModal = ({ show, handleClose, purchase }) => {
             phone
         }
 
-        fetch('http://localhost:5000/purchase', {
+        fetch('https://electrical-manufactere.herokuapp.com/purchase', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'
