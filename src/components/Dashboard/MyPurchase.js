@@ -22,7 +22,7 @@ const MyPurchase = () => {
 
     return (
         <div>
-            <h3 className='text-center mb-5'>My Purchase Items :{purchases?.length}</h3>
+            <h3 className='mb-5 text-center'>My Purchase Items :{purchases?.length}</h3>
 
             <div className="overflow-x-auto">
                 <table className="table w-full">
@@ -32,8 +32,8 @@ const MyPurchase = () => {
                             <th></th>
                             <th>Product Name</th>
                             <th>Product Price</th>
-
                             <th>Purchase Quantity</th>
+                            <th>Payment Status</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -46,6 +46,10 @@ const MyPurchase = () => {
                                     <td>{p.productName}</td>
                                     <td>${p.price}</td>
                                     <td>{p.orderQuantity}</td>
+                                    <td>
+                                        <button class="btn btn-sm btn-primary mr-3">Make Payment</button>
+                                        <button class="btn btn-sm btn-danger">Cancel Order</button>
+                                    </td>
                                 </tr>)
                         }
 

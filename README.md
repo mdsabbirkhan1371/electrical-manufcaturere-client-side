@@ -1,6 +1,12 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://inquisitive-mermaid-bbbaf6.netlify.app/).
+
+## Using Language and Frame Works;
+
+1. I used in this project react js and express js for backend and for data base mongodb.
+2. I also used bootstrap,tailwind css.
+3.I used react router vanaila css and React tostify ,react firbase hooks. for login and signup.
 
 ## Available Scripts
 
